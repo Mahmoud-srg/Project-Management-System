@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Management System</title>
+  </head>
+  <body>
+    <div class="container py-3">
+      <h2 class="text-center mb-4 fw-bold">Products Management System</h2>
+
+      <label for="ProductName" class="mb-2">Product Name:</label>
+      <input
+        type="text"
+        id="ProductName"
+        name="ProductName"
+        class="form-control"
+      />
+      <p class="text-danger mb-4" id="ProductNameError"></p>
+
+
+      <label for="ProductPrice" class="mb-2">Product Price:</label>
+      <input
+        type="number"
+        id="ProductPrice"
+        name="ProductPrice"
+        class="form-control"
+      />
+      <p class="text-danger mb-4" id="ProductPriceError"></p>
+
+      <label for="ProductCategory" class="mb-2">Product Category:</label>
+      <input
+        type="text"
+        id="ProductCategory"
+        name="ProductCategory"
+        class="form-control"
+      />
+      <p class="text-danger mb-4" id="ProductCategoryError"></p>
+
+      <label for="ProductDescription" class="mb-2">Product Description:</label>
+      <textarea
+        id="ProductDescription"
+        name="ProductDescription"
+        class="form-control"
+      ></textarea>
+      <p class="text-danger mb-4" id="ProductDescriptionError"></p>
+
+      <button
+        id="addProduct"
+        type="submit"
+        class="btn btn-outline-info mt-3 px-3"
+      >
+        Add Product
+      </button>
+      <button
+        id="updateButton"
+        type="submit"
+        class="btn btn-outline-info mt-3 px-3 d-none"
+      >
+        Update Product
+      </button>
+    </div>
+    <div class="search p-4 w-75 mx-auto">
+      <label for="searchInput" class="mb-2">Search:</label>
+      <input
+        type="text"
+        id="searchInput"
+        name="searchInput"
+        class="form-control"
+        placeholder="Search By Name ...."
+      />
+    </div>
+
+    <div class="w-75 mx-auto">
+      <table class="table text-center">
+        <thead>
+          <tr>
+            <th>index</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Catogery</th>
+            <th>Description</th>
+            <th>Update</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody id="tableData"></tbody>
+      </table>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
